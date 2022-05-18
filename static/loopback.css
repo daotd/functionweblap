@@ -1,0 +1,109 @@
+body{
+
+    background: url("image/pexels-francesco-ungaro-281260.jpg");
+    background-size: cover;
+    margin: 0;
+}
+h2{
+    text-align: center;
+}
+#wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -90px;
+}
+#form-login{
+    max-width: 195px;
+    background: linear-gradient(to right, #dd6d92, #e7b653);
+    flex-grow: 1;
+    padding: 30px 27px 27px;
+    /* box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.8); */
+}
+.form-group{
+    padding: 5px;
+    display: block;
+    margin-left: 5px;
+}
+label{
+    display: block;
+    font-weight: bold;
+}
+.form-submit{
+    background: transparent;
+    border: 1px solid #f5f5f5;
+    color: black;
+    width: 177px;
+    text-transform: uppercase;
+    padding: 8px 10px;
+    /* transition: 0.25s ease-in-out; */
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.form-submit:hover{
+    border: 1px solid black;
+}
+/*clear h?t d?nh d?ng margin padding c?a th? ul*/
+ul{
+    margin: 0;
+    padding: 0;
+    padding-top: 13px;
+    padding-bottom: 50px;
+    list-style: none; /*clear style c?a th? ul*/
+    background: transparent;
+}
+
+/*xét chi?u r?ng cho th? li*/
+li{
+    width: 150px;
+    text-align: center; 
+}
+
+.menu > img{
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin-left: 100px;
+    padding-top: 7px;
+    list-style: none;
+}
+
+/*CSS cho th? ul*/
+.menu > ul{
+    height: 40px;
+    text-align: center;
+}
+.menu > ul > li{
+    display: inline-block; /*d?nh d?ng s?p x?p theo chi?u ngang*/
+    border-right: 1px solid #f5f5f5; 
+    position: relative;
+}
+.menu > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.menu > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 15px;
+}
+.menu > ul > li > ul li{
+    padding: 5px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+.menu > ul > li > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+ul li:last-child{
+    border: none;
+}
+.menu ul li:hover ul{
+    display: block;
+}

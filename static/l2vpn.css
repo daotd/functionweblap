@@ -1,0 +1,125 @@
+body{
+    background: url("image/pexels-francesco-ungaro-281260.jpg");
+    background-size: cover;
+    margin: 0;
+}
+h2{
+    text-align: center;
+}
+#form-login{
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-auto-flow: row dense;
+    grid-gap: .8em;
+    background: #eee;
+    padding: 1.2em;
+    max-width: 362px;
+    margin-left: 470px;
+    margin-top: 45px;
+    background: linear-gradient(to right, #dd6d92, #e7b653);
+    color: black;
+}
+#form-group{
+    margin-right: 10px;
+    margin-left: -15px;
+}
+#form-group > h2{
+    text-align: center;
+}
+#form-group label, input{
+    /* margin-right: 13px; */
+    padding: 5px;
+    margin-left: 3px;
+}
+
+#form-group > select{
+    margin-left: 2px;
+    padding: 5px;
+    width: 100%;
+}
+
+.form-submit {
+    grid-column: 1 / 3;
+    font-weight: bold;
+    width: 385px;
+    /* margin: -10px; */
+    padding: 5px;
+    margin-left: -12px;
+}
+.pw_id {
+    grid-column: 1 / 3;
+    font-weight: bold;
+    width: 370px;
+    /* margin: -10px; */
+    padding: 5px;
+    margin-left: -12px;
+}
+label{
+    display: block;
+    font-weight: bold;
+}
+.form-submit:hover{
+    border: 1px solid black;
+}
+/*clear h?t d?nh d?ng margin padding c?a th? ul*/
+ul{
+    margin: 0;
+    padding: 0;
+    padding-top: 13px;
+    padding-bottom: 50px;
+    list-style: none; /*clear style c?a th? ul*/
+    background: transparent;
+}
+
+/*xét chi?u r?ng cho th? li*/
+li{
+    width: 150px;
+    text-align: center; 
+}
+
+.menu > img{
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin-left: 100px;
+    padding-top: 7px;
+    list-style: none;
+}
+
+/*CSS cho th? ul*/
+.menu > ul{
+    height: 40px;
+    text-align: center;
+}
+.menu > ul > li{
+    display: inline-block; /*d?nh d?ng s?p x?p theo chi?u ngang*/
+    border-right: 1px solid #f5f5f5; 
+    position: relative;
+}
+.menu > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.menu > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 15px;
+}
+.menu > ul > li > ul li{
+    padding: 5px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+.menu > ul > li > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+ul li:last-child{
+    border: none;
+}
+.menu ul li:hover ul{
+    display: block;
+}

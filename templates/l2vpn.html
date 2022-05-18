@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edgr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='l2vpn.css') }}">
+    <title>LoopBack Service</title>
+</head>
+
+<body>
+    <div class="menu">
+        <img src="../static/image/logo.jpg" alt="Ctin">
+        <ul>
+            <li><a href="http://10.0.137.194:8080/login.html" target="_blank" rel="noopener noreferrer">NSO Server</a></li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="/loopback">Loopback</a></li>
+                    <li><a href="/l2vpn">L2VPN</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Devices</a>
+                <ul>
+                    <li><a href="#">Cisco-XR</a></li>
+                    <li><a href="#">Cisco-XE</a></li>
+                    <li><a href="#">Jupiter</a></li>
+                </ul>
+            </li>
+            <li><a href="/">Guide</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <form action="" id="form-login" method="POST">
+            <div id="form-group">
+                <h2>Pe1</h2>
+                <label>Device Name</label>
+                <select type="text" name="pe1_name" id="pe1_name">
+                    {% for i in device_name_l2vpn %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+                <!-- <input type="text" name="pe1_name"  placeholder="Tên thiet bi"> -->
+
+                <label>Type Interface</label>
+                <select type="text" name="pe1_interface_type" id="pe1_interface_type">
+                    {% for i in device_type_interface %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+                <!-- <input type="text" name="pe1_interface_type" placeholder="Type Interface"> -->
+
+                <label>ID Interface</label>
+                <select type="text" name="pe1_interface_id" id="pe1_interface_id">
+                    {% for i in device_id_interface %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+                <!-- <input type="text" name="pe1_interface_id" placeholder="ID Interface"> -->
+
+                <label>Vlan</label>
+                <input type="text" name="pe1_vlan"  placeholder="Vlan ID">
+            </div>
+            <div id="form-group">
+                <h2>Pe2</h2>
+                <label>Device Name</label>
+                <select type="text" name="pe2_name" id="pe2_name">
+                    {% for i in device_name_l2vpn %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+                <!-- <input type="text" name="pe2_name"  placeholder="Tên thiet bi"> -->
+
+                <label>Type Interface</label>
+                <select type="text" name="pe2_interface_type" id="pe2_interface_type">
+                    {% for i in device_type_interface %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+                <!-- <input type="text" name="pe2_interface_type"  placeholder="Type Interface"> -->
+
+                <label>ID Interface</label>
+                <select type="text" name="pe2_interface_id" id="pe2_interface_id">
+                    {% for i in device_id_interface %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+                <!-- <input type="text" name="pe2_interface_id"  placeholder="ID Interface"> -->
+
+                <label>Vlan</label>
+                <input type="text" name="pe2_vlan"  placeholder="Vlan ID">
+            </div>
+            <input type="text" name="pwid" class="pw_id" placeholder="PWID">
+            <input type="submit" value="Submit" class="form-submit">
+        </form>
+    </div>
+<!-- <script src="../static/js/l2vpn.js"></script> -->
+<!-- <script>
+    function populate(s1,s2)
+    {
+        var s1 = document.getElementById(s1);
+        var s2 = document.getElementById(s2);
+        s2.innerHTML = "";
+        if(s1.value == "pe1_interface_type")
+        {
+            var optionArray = "{{device_type_interface}}";
+        }
+        for(var option in optionArray)
+        {
+            var pair = optionArray[option].split("");
+            var newoption = document.createElement("option");
+            newoption.value = pair[0];
+            newoption.innerHTML = pair[1];
+            s2.options.add(newoption)
+        }
+    }
+</script> -->
+</body>
+</html>

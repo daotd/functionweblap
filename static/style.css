@@ -1,0 +1,71 @@
+body{
+
+    background: url("image/pexels-francesco-ungaro-281260.jpg");
+    background-size: cover;
+    /* background-position-y: -5px ;
+    background-position-x: 27px; */
+    margin: 0;
+
+}
+
+/*clear h?t d?nh d?ng margin padding c?a th? ul*/
+ul{
+    margin: 0;
+    padding: 0;
+    padding-top: 13px;
+    list-style: none; /*clear style c?a th? ul*/
+    background: transparent;
+}
+
+/*xét chi?u r?ng cho th? li*/
+li{
+    width: 150px;
+    text-align: center; 
+}
+
+.menu > img{
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin-left: 100px;
+    padding-top: 7px;
+    list-style: none;
+}
+
+/*CSS cho th? ul*/
+.menu > ul{
+    height: 40px;
+    text-align: center;
+}
+.menu > ul > li{
+    display: inline-block; /*d?nh d?ng s?p x?p theo chi?u ngang*/
+    border-right: 1px solid #f5f5f5; 
+    position: relative;
+}
+.menu > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.menu > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 15px;
+}
+.menu > ul > li > ul li{
+    padding: 5px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+.menu > ul > li > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+ul li:last-child{
+    border: none;
+}
+.menu ul li:hover ul{
+    display: block;
+}
